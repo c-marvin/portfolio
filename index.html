@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d86632">
+  <meta name="application-name" content="Marvin Caruncho">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/gentleman-duck-icon.png">
+  <link rel="apple-touch-icon" href="assets/gentleman-duck-icon.png">
+  <meta name="description" content="Portfolio of Marvin Caruncho, an English education student, LAVOXA writer, and tech tinkerer.">
+  <link rel="canonical" href="https://c-marvin.github.io/portfolio/">
+  <title>Marvin Caruncho | Portfolio</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_PH">
+  <meta property="og:site_name" content="Marvin Caruncho">
+  <meta property="og:url" content="https://c-marvin.github.io/portfolio/">
+  <meta property="og:title" content="Marvin Caruncho | Portfolio">
+  <meta property="og:description" content="English education student, LAVOXA writer, tech tinkerer—curious about language, stories, and how things work.">
+  <meta property="og:image" content="https://c-marvin.github.io/portfolio/assets/social-preview.jpg">
+  <meta property="og:image:secure_url" content="https://c-marvin.github.io/portfolio/assets/social-preview.jpg">
+  <meta property="og:image:alt" content="Marvin Caruncho’s portfolio tagline beside a yellow rubber duck in a warm pixel-art autumn valley.">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marvin Caruncho | Portfolio">
+  <meta name="twitter:description" content="English education student, LAVOXA writer, tech tinkerer—curious about language, stories, and how things work.">
+  <meta name="twitter:image" content="https://c-marvin.github.io/portfolio/assets/social-preview.jpg">
+  <meta name="twitter:image:alt" content="Marvin Caruncho’s portfolio tagline beside a yellow rubber duck in a warm pixel-art autumn valley.">
+  <style>
+    :root {
+      color-scheme: light;
+      --orange: #d86632;
+      --orange-deep: #9c3b20;
+      --gold: #f2b95d;
+      --cream: #fff4e3;
+      --paper: #fffaf1;
+      --ink: #301711;
+      --ink-soft: #5d3429;
+      --muted: #79594a;
+      --gutter: clamp(1rem,3vw,3rem);
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --sans: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+      --type-label: clamp(.78rem,calc(.75rem + .12vw),.83rem);
+      --type-meta: clamp(.8rem,calc(.78rem + .12vw),.86rem);
+      --piece-inset: clamp(1rem,calc(.85rem + 1vw),1.5rem);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      isolation: isolate;
+      overflow-x: clip;
+      color: var(--ink);
+      font: 400 1rem/1.58 var(--sans);
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+      font-variant-ligatures: common-ligatures contextual;
+      font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
+      background:
+        radial-gradient(ellipse at 12% 9%, rgba(255,203,119,.58), transparent 29%),
+        radial-gradient(ellipse at 87% 36%, rgba(107,39,21,.27), transparent 44%),
+        linear-gradient(128deg,#c85b2d 0%,#e5813d 46%,#b84928 100%);
+    }
+    .autumn-backdrop { position: absolute; z-index: 1; top: 0; left: 50%; width: 100vw; height: clamp(35rem,78vh,58rem); overflow: hidden; transform: translateX(-50%); background: url("assets/craftpix-autumn-valley.png") center top / cover no-repeat; image-rendering: pixelated; pointer-events: none; -webkit-mask-image: linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%); mask-image: linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%); }
+    .autumn-backdrop__layer { position: absolute; z-index: var(--layer-order); inset: -36px; background: var(--layer-image) center top / cover no-repeat; image-rendering: pixelated; transform: translate3d(0,0,0); pointer-events: none; }
+    .autumn-backdrop__layer--1 { --layer-order: 5; --layer-image: url("assets/autumn-layers/layer-1.png"); --drift-from-x: -8px; --drift-from-y: 3px; --drift-to-x: 8px; --drift-to-y: -3px; animation: autumn-layer-drift 34s ease-in-out infinite alternate; }
+    .autumn-backdrop__layer--2 { --layer-order: 4; --layer-image: url("assets/autumn-layers/layer-2.png"); --drift-from-x: 6px; --drift-from-y: -3px; --drift-to-x: -6px; --drift-to-y: 3px; animation: autumn-layer-drift 46s ease-in-out -8s infinite alternate; }
+    .autumn-backdrop__layer--3 { --layer-order: 3; --layer-image: url("assets/autumn-layers/layer-3.png"); --drift-from-x: -4px; --drift-from-y: 2px; --drift-to-x: 4px; --drift-to-y: -2px; animation: autumn-layer-drift 58s ease-in-out -16s infinite alternate; }
+    .autumn-backdrop__layer--4 { --layer-order: 2; --layer-image: url("assets/autumn-layers/layer-4.png"); --drift-from-x: 2px; --drift-from-y: -1px; --drift-to-x: -2px; --drift-to-y: 1px; animation: autumn-layer-drift 72s ease-in-out -6s infinite alternate; }
+    .autumn-backdrop__layer--5 { --layer-order: 1; --layer-image: url("assets/autumn-layers/layer-5.png"); }
+    @keyframes autumn-layer-drift { from { transform: translate3d(var(--drift-from-x),var(--drift-from-y),0); } to { transform: translate3d(var(--drift-to-x),var(--drift-to-y),0); } }
+    .autumn-backdrop:not(.is-visible) .autumn-backdrop__layer--1,.autumn-backdrop:not(.is-visible) .autumn-backdrop__layer--2,.autumn-backdrop:not(.is-visible) .autumn-backdrop__layer--3,.autumn-backdrop:not(.is-visible) .autumn-backdrop__layer--4 { animation-play-state: paused; }
+    .autumn-backdrop::after { position: absolute; z-index: 6; inset: 0; content: ""; background: linear-gradient(to bottom,rgba(200,91,45,.02) 0%,rgba(200,91,45,.08) 68%,rgba(200,91,45,.32) 100%),linear-gradient(to right,rgba(48,23,17,.12),transparent 56%,rgba(48,23,17,.05)); pointer-events: none; }
+    a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: .075em; }
+    a:hover { text-decoration-thickness: .13em; }
+    a:focus-visible,button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    ::selection { background: var(--ink); color: var(--cream); }
+    h1,h2,h3,p,blockquote { margin-top: 0; }
+    h1,h2,h3 { font-family: var(--serif); font-weight: 500; text-wrap: balance; }
+    p { max-width: 66ch; margin-bottom: 1rem; text-wrap: pretty; }
+    .skip-link { position: absolute; z-index: 60; top: .6rem; left: var(--gutter); padding: .7rem 1rem; transform: translateY(-150%); border-radius: .7rem; background: var(--cream); color: var(--ink); font-weight: 700; }
+    .skip-link:focus { transform: translateY(0); }
+    .shell { position: relative; z-index: 2; width: min(90rem,calc(100% - var(--gutter) - var(--gutter))); margin-inline: auto; }
+    main.shell { z-index: auto; }
+    .site-head { position: sticky; top: .65rem; z-index: 50; display: flex; align-items: center; gap: .65rem; width: fit-content; max-width: calc(100% - var(--gutter) - var(--gutter)); min-height: 3.15rem; margin: .7rem 0 0 var(--gutter); padding: .55rem 1rem; border: 1px solid rgba(255,250,241,.62); border-radius: 1.1rem; background: linear-gradient(145deg,rgba(255,255,255,.38),rgba(255,255,255,.08) 55%,rgba(255,255,255,.22)),rgba(255,248,235,.26); box-shadow: 0 10px 28px rgba(67,27,12,.15),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(255,255,255,.24); }
+    .site-name { margin: 0; color: var(--ink); font-size: 1rem; font-weight: 780; letter-spacing: -.04em; }
+    .duck-stage { position: fixed; z-index: 4; inset: auto 0 0; height: 110px; overflow: visible; pointer-events: none; background: transparent; }
+    .duck-walker { position: absolute; z-index: 1; bottom: 0; left: 0; width: 48px; height: 48px; opacity: 1; pointer-events: none; }
+    .duck-walk-hint { position: absolute; left: 50%; bottom: calc(100% + .25rem); padding: .2rem .48rem; border: 1px solid rgba(255,255,255,.76); border-radius: 999px; background: rgba(255,248,235,.9); color: var(--ink); font: 800 var(--type-label)/1 var(--sans); letter-spacing: .04em; opacity: 0; transform: translate(-50%,4px); white-space: nowrap; pointer-events: none; }
+    .duck-walker.is-bottom-hint .duck-walk-hint { animation: duck-hint-pop 2.5s cubic-bezier(.2,.7,.25,1) both; }
+    @keyframes duck-hint-pop { 0% { opacity: 0; transform: translate(-50%,5px) scale(.94); } 14%,72% { opacity: 1; transform: translate(-50%,0) scale(1); } 100% { opacity: 0; transform: translate(-50%,-3px) scale(.98); } }
+    .ducky { position: absolute; inset: 0; display: block; width: 48px; height: 48px; margin: 0; padding: 0; border: 0; border-radius: .35rem; appearance: none; background: transparent; pointer-events: auto; cursor: pointer; }
+    .ducky-sprite { position: absolute; inset: 0; display: block; width: 48px; height: 48px; }
+    .ducky-sprite::before { position: absolute; inset: 0; content: ""; background: url("assets/gentleman-ducky.png") 0 -48px / 288px 192px no-repeat; image-rendering: pixelated; filter: drop-shadow(0 2px 2px rgba(48,23,17,.32)); }
+    @keyframes gentleman-ducky-walk {
+      0% { background-position: 0 -48px; }
+      16.66% { background-position: -48px -48px; }
+      33.32% { background-position: -96px -48px; }
+      49.98% { background-position: -144px -48px; }
+      66.64% { background-position: -192px -48px; }
+      83.3%,100% { background-position: -240px -48px; }
+    }
+    @keyframes gentleman-ducky-stroll {
+      0% { transform: translate3d(-48px,0,0); }
+      100% { transform: translate3d(calc(100vw + 48px),0,0); }
+    }
+    @keyframes gentleman-ducky-jump {
+      0%,100% { transform: translateY(0) rotate(0); }
+      38% { transform: translateY(-2.25rem) rotate(-7deg); }
+      62% { transform: translateY(-3rem) rotate(5deg); }
+      82% { transform: translateY(0) rotate(0); }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .duck-walker { animation: gentleman-ducky-stroll var(--duck-travel-duration,54s) linear infinite; }
+      .ducky-sprite::before { animation: gentleman-ducky-walk 1s steps(1,end) infinite; }
+      .ducky.is-jumping .ducky-sprite { animation: gentleman-ducky-jump 680ms cubic-bezier(.2,.72,.25,1) both; }
+      .ducky:hover .ducky-sprite::before { filter: brightness(1.07); }
+    }
+    .piece { position: relative; isolation: isolate; container-type: inline-size; min-width: 0; scroll-margin-top: 4.5rem; overflow: hidden; border: 1px solid rgba(255,255,255,.72); border-radius: 1.55rem; background: rgba(255,250,241,.56); box-shadow: 0 18px 42px rgba(67,27,12,.18),inset 0 1px 0 rgba(255,255,255,.82),inset 0 -1px 0 rgba(255,255,255,.22); -webkit-backdrop-filter: blur(12px) saturate(150%); backdrop-filter: blur(12px) saturate(150%); transition: border-color 280ms ease,box-shadow 320ms ease,translate 420ms cubic-bezier(.22,1,.36,1); }
+    .piece::before { position: absolute; z-index: 0; inset: 0; border-radius: inherit; content: ""; background: linear-gradient(132deg,rgba(255,255,255,.4),rgba(255,255,255,.08) 28%,transparent 48%,rgba(255,255,255,.12) 76%,rgba(255,255,255,.26)); pointer-events: none; }
+    .piece::after { position: absolute; z-index: 0; inset: 1px; border: 1px solid rgba(255,255,255,.2); border-radius: inherit; content: ""; pointer-events: none; }
+    .piece > * { position: relative; z-index: 1; }
+    .piece[hidden] { display: none !important; }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) { .piece:hover,.piece:focus-within { border-color: rgba(255,250,241,.96); box-shadow: 0 22px 46px rgba(67,27,12,.22),inset 0 1px 0 rgba(255,255,255,.86),inset 0 -1px 0 rgba(255,255,255,.22); translate: 0 -4px; } }
+    .print-mockup { transform-origin: 50% 55%; transition: transform 360ms cubic-bezier(.2,.7,.25,1); }
+    .print-mockup--flyer { transform: perspective(900px) rotateY(-4deg) rotateX(1deg); }
+    .print-mockup--booklet { transform: perspective(900px) rotateY(-3deg) rotateX(.8deg); }
+    .mockup-stage:focus-visible { outline: 2px solid var(--orange-deep); outline-offset: 4px; border-radius: .5rem; }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      .mockup-stage:hover .print-mockup,.mockup-stage:focus-visible .print-mockup { transform: perspective(900px) translateY(-7px) rotateY(-1deg) rotateX(3deg) scale(1.012); }
+    }
+
+    .opening { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0,1.04fr) minmax(18rem,.86fr); align-items: center; gap: clamp(2rem,5.5vw,6rem); min-height: clamp(30rem,58vh,43rem); padding-block: clamp(2.7rem,5vh,4rem) clamp(2rem,4vh,3.3rem); }
+    .hero-copy { container-type: inline-size; max-width: 44rem; min-width: 0; padding: clamp(1.2rem,3.1vw,2.35rem); border: 1px solid rgba(255,255,255,.76); border-radius: 2rem; background: linear-gradient(140deg,rgba(255,255,255,.44),rgba(255,255,255,.08) 46%,rgba(255,255,255,.22)),rgba(255,248,235,.36); box-shadow: 0 18px 42px rgba(67,27,12,.18),inset 0 1px 0 rgba(255,255,255,.88),inset 0 -1px 0 rgba(255,255,255,.24); transition: transform 380ms cubic-bezier(.22,1,.36,1),box-shadow 380ms ease; }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) { .hero-copy:hover,.hero-copy:focus-within { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(67,27,12,.22),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.24); } }
+    .opening h1 { max-width: 10ch; margin: 0 0 clamp(1.3rem,2.4vw,2rem); font-size: clamp(3.4rem,8vw,8rem); line-height: .88; letter-spacing: -.075em; }
+    .opening h1 span { display: block; }
+    .opening h1 span:nth-child(2) { margin-left: .38em; color: var(--orange-deep); }
+    .opening h1 span:nth-child(3) { margin-left: .12em; }
+    .hero-intro { max-width: 38ch; margin: 0; color: var(--ink-soft); font-size: clamp(1rem,1.4vw,1.18rem); font-weight: 620; line-height: 1.5; }
+    .hero-art { position: relative; isolation: isolate; width: min(100%,30rem); margin: 0 auto; }
+    .hero-art::before { position: absolute; z-index: -1; inset: 8% 7%; border-radius: 48% 52% 53% 47% / 49% 45% 55% 51%; content: ""; background: radial-gradient(circle at 50% 45%,rgba(255,211,122,.65),rgba(255,248,235,.25) 62%,rgba(143,59,31,.1) 78%,transparent 82%); filter: blur(2px); }
+    .hero-art__surface { position: relative; display: block; min-height: 24rem; aspect-ratio: .94; overflow: hidden; border: 1px solid rgba(255,255,255,.78); border-radius: 2rem; background: linear-gradient(145deg,rgba(255,255,255,.45),rgba(255,255,255,.08) 42%,rgba(255,255,255,.24)),rgba(255,248,235,.2); box-shadow: 0 18px 44px rgba(67,27,12,.17),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.28); }
+    .hero-art__fallback { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; padding: .7rem; transform-origin: 50% 58%; }
+    @keyframes hero-duck-bob { 0%,100% { transform: translate3d(0,0,0) rotate(-1deg); } 50% { transform: translate3d(0,-.45rem,0) rotate(1deg); } }
+    @media (prefers-reduced-motion: no-preference) { .hero-art__fallback,.hero-art__canvas { animation: hero-duck-bob 7s ease-in-out infinite; } }
+
+    .index-row { position: relative; z-index: 5; display: flex; width: fit-content; max-width: 100%; flex-wrap: wrap; align-items: center; justify-content: center; gap: .25rem; margin: 0 auto clamp(1.5rem,3vw,2.5rem); padding: .42rem; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: linear-gradient(145deg,rgba(255,255,255,.32),rgba(255,255,255,.08) 56%,rgba(255,255,255,.18)),rgba(255,248,235,.24); box-shadow: 0 10px 28px rgba(67,27,12,.12),inset 0 1px 0 rgba(255,255,255,.82),inset 0 -1px 0 rgba(255,255,255,.18); }
+    .index-label { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .45rem; padding-inline: .75rem; color: var(--ink-soft); font-size: .8rem; font-weight: 800; line-height: 1; letter-spacing: .08em; text-transform: uppercase; overflow: visible; }
+    .index-label::before { display: block; flex: 0 0 24px; width: 24px; height: 24px; content: ""; background: url("assets/kenney-harvest-stalk.png") center / 18px 18px no-repeat; image-rendering: pixelated; }
+    .filter-button { min-height: 2.8rem; padding: .45rem 1rem; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--ink); font: 700 .9rem/1 var(--sans); cursor: pointer; transition: background-color 280ms ease,border-color 280ms ease,color 280ms ease,transform 300ms cubic-bezier(.22,1,.36,1),box-shadow 280ms ease; }
+    .filter-button:hover { transform: translateY(-2px); background: rgba(255,250,241,.55); }
+    .filter-button:active { transform: translateY(0) scale(.97); }
+    .filter-button:focus-visible,.ducky:focus-visible,.org-detail summary:focus-visible,.contact-icon:focus-visible { outline: 3px solid var(--orange-deep); outline-offset: 3px; }
+    .filter-button[aria-pressed="true"] { border-color: rgba(255,255,255,.72); background: rgba(255,250,241,.88); box-shadow: 0 5px 16px rgba(67,27,12,.15),inset 0 1px 0 #fff; }
+    .filter-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    .field { position: relative; z-index: 2; --panel-gap: clamp(.85rem,1.4vw,1.2rem); column-count: 2; column-gap: var(--panel-gap); column-fill: balance; padding-bottom: clamp(2rem,4vw,3.5rem); }
+    .field > .piece { display: block; width: 100%; max-width: 100%; margin: 0 0 var(--panel-gap); break-inside: avoid; }
+    .piece--record,.piece--writing,.panel-pair { column-span: all; }
+    .panel-pair { display: flex; align-items: center; gap: var(--panel-gap); margin-bottom: var(--panel-gap); }
+    .panel-pair > .piece { flex: 1 1 0; min-width: 0; max-width: 100%; margin: 0; break-inside: avoid; }
+    .panel-pair--lead > .piece:first-child { flex-basis: 42%; }
+    .panel-pair--lead > .piece:last-child { flex-basis: 58%; }
+    .panel-pair:not(:has(> .piece:not([hidden]))) { display: none; }
+    .panel-pair:has(> .piece[hidden]) > .piece:not([hidden]) { flex-basis: 100%; max-width: 100%; }
+    .piece--writing { background: rgba(255,250,241,.58); }
+    .piece--clip { padding: var(--piece-inset); background: rgba(255,248,235,.54); }
+    .piece--clip h2 { max-width: 24ch; font-size: clamp(1.45rem,2.2vw,2rem); line-height: 1.08; }
+    .mockup-stage { display: grid; min-width: 0; place-items: center; margin: 1rem 0; padding: .85rem; }
+    .mockup-stage--flyer { min-height: 22rem; }
+    .print-mockup { position: relative; width: 100%; }
+    .print-mockup img { display: block; width: 100%; height: auto; border: 0; border-radius: .18rem; }
+    .print-mockup--flyer { width: min(84%,22rem); }
+    .print-mockup--booklet { width: 100%; }
+    .piece--tinker { margin-top: 0; padding: var(--piece-inset); background: rgba(255,205,116,.58); }
+    .piece--life { margin-top: 0; padding: var(--piece-inset); border-color: rgba(255,244,227,.42); background: linear-gradient(145deg,rgba(132,157,103,.52),rgba(47,76,53,.78) 58%,rgba(30,55,44,.72)),rgba(50,72,48,.55); color: var(--cream); }
+    .piece--research { margin-top: 0; padding: var(--piece-inset); background: rgba(255,248,235,.54); }
+    .piece--record { padding: var(--piece-inset); background: rgba(255,250,241,.62); }
+    .piece--achievements { padding: var(--piece-inset); background: rgba(255,248,235,.58);}
+    .piece[data-category~="work"] { background: linear-gradient(140deg,rgba(230,137,60,.28),rgba(255,242,212,.34) 52%,rgba(169,70,39,.14)),rgba(255,250,241,.3); }
+    .piece[data-category~="leadership"]:not(.piece--life):not([data-category~="profile"]) { background: linear-gradient(140deg,rgba(151,160,98,.27),rgba(240,231,184,.34) 52%,rgba(76,98,63,.17)),rgba(255,249,229,.32); }
+    .piece[data-category~="profile"]:not([data-category~="leadership"]) { background: linear-gradient(140deg,rgba(244,190,82,.31),rgba(255,237,187,.34) 52%,rgba(183,91,44,.14)),rgba(255,249,228,.32); }
+    .piece[data-category~="leadership"][data-category~="profile"] { background: linear-gradient(140deg,rgba(145,157,94,.26),rgba(231,176,86,.25) 54%,rgba(255,237,195,.32)),rgba(255,248,228,.32); }
+    .achievement-list,.membership-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .15rem 2rem; margin: 0; padding: 0; list-style: none; }
+    .achievement-list li,.membership-list li { display: grid; align-content: start; gap: .25rem; padding: .65rem 0; border-top: 1px solid rgba(48,23,17,.14); color: var(--ink-soft); }
+    .membership-list li { min-height: 3.8rem; }
+    .achievement-list strong,.membership-list strong { color: var(--ink); }
+    .achievement-list span,.membership-list span { font-size: .9rem; }
+    .achievement-list a { width: fit-content; color: var(--orange-deep); font-size: .86rem; font-weight: 760; }
+    .membership-section { margin-top: 1.15rem; }
+    .piece-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .4rem 1rem; min-width: 0; padding: var(--piece-inset) var(--piece-inset) .65rem; color: var(--ink-soft); font-size: .82rem; font-weight: 680; }
+    .piece-top span:last-child { max-width: 100%; min-width: 0; text-align: right; overflow-wrap: anywhere; }
+    .article-layout { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(14rem,.9fr); gap: 0; }
+    .article-copy { padding: var(--piece-inset); }
+    .article-copy h2 { max-width: 14ch; margin-bottom: .65rem; font-size: clamp(2rem,4vw,4.2rem); line-height: .94; letter-spacing: -.052em; }
+    .meta { margin-bottom: 1.3rem; color: var(--muted); font-size: .86rem; }
+    .article-copy blockquote { max-width: 45ch; margin: 0 0 1.25rem; padding-left: 1rem; border-left: 3px solid var(--orange); color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.12rem,1.65vw,1.45rem); line-height: 1.38; }
+    .text-link { display: inline-block; color: var(--orange-deep); font-weight: 780; }
+    .source-link { margin: .35rem 0 0; }
+    figure { margin: 0; }
+    .piece h2,.piece h3 { margin-bottom: .85rem; color: var(--ink); font-size: clamp(1.55rem,2.4vw,2.4rem); line-height: 1.06; letter-spacing: -.04em; }
+    .piece p { max-width: 100%; color: var(--ink-soft); line-height: 1.55; }
+    .piece p:last-child { margin-bottom: 0; }
+    .piece--life h2,.piece--life h3,.piece--life p,.piece--life li,.piece--life strong { color: var(--cream); }
+    .detail-list { margin: 1rem 0 0; padding: 0; list-style: none; }
+    .detail-list li { padding: .5rem 0; border-top: 1px solid rgba(255,244,227,.26); color: var(--cream); }
+    .research-status { display: inline-flex; margin-bottom: .85rem; padding: .28rem .62rem; border: 1px solid rgba(48,23,17,.18); border-radius: 999px; color: var(--ink-soft); font-size: var(--type-label); font-weight: 760; }
+    .record-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 1rem; }
+    .record-heading h2 { margin: 0; font-size: clamp(1.8rem,3vw,2.7rem); }
+    .record-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(1rem,3vw,3rem); }
+    .record-grid > section,.achievement-list li,.membership-list li { min-width: 0; overflow-wrap: anywhere; }
+    .piece img,.piece figure { max-width: 100%; }
+    .record-grid h3,.membership-section h3 { margin-bottom: .65rem; color: var(--orange-deep); font: 700 clamp(1.125rem,calc(1.05rem + .4vw),1.3rem)/1.2 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+    .record-list { margin: 0; padding: 0; list-style: none; }
+    .record-list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .58rem 1.5rem; min-width: 0; padding: .58rem 0; border-top: 1px solid rgba(48,23,17,.12); color: var(--ink-soft); }
+    .record-list strong,.record-list span { min-width: 0; overflow-wrap: anywhere; }
+    .record-list strong { color: var(--ink); font-weight: 750; }
+    .record-list span { text-align: right; }
+    .record-education { margin: 0; padding: 0; list-style: none; }
+    .record-education li { padding: .58rem 0; border-top: 1px solid rgba(48,23,17,.12); color: var(--ink-soft); }
+    .record-education strong,.record-education .education-title { color: var(--ink); font-weight: 750; }
+    .record-education li { display: grid; grid-template-columns: minmax(0,1fr) minmax(8rem,14rem); align-items: baseline; gap: .35rem 1rem; }
+    .record-education li span { color: var(--muted); font-size: var(--type-meta); line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
+    @media (max-width: 620px) { .record-education li { grid-template-columns: minmax(0,1fr) minmax(7.25rem,44%); gap: .35rem .65rem; } }
+    .endnote { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .65rem; padding-block: 1rem 2.5rem; color: var(--cream); font-size: .88rem; text-align: center; }
+    .endnote p { margin: 0; }
+    .endnote a { font-weight: 700; }
+    .contact-links { display: flex; width: 100%; flex-wrap: wrap; justify-content: center; gap: .65rem 1.25rem; }
+    .footer-name { font-size: 1rem; font-weight: 700; letter-spacing: .01em; }
+    .duck-note { max-width: none; margin-inline: auto; font-size: var(--type-label); opacity: .86; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .duck-walker { animation: none; left: auto; right: 1rem; opacity: 1; }
+      .ducky-sprite::before { animation: none; background-position: 0 -48px; }
+      .hero-art__fallback,.piece { animation: none; }
+    }
+    @media (max-width: 880px) {
+      .hero-art__surface { min-height: 0; }
+      .article-layout,.record-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 840px) { .field { column-count: 1; --panel-gap: .9rem; } }
+    @media (max-width: 760px) {
+      .opening { grid-template-columns: minmax(0,1fr); gap: 1.5rem; min-height: 0; padding-block: 2.8rem 1.6rem; }
+      .hero-copy { padding: 1.05rem; border-radius: 1.55rem; }
+      .opening h1 { max-width: 12ch; }
+      .hero-art { width: min(100%,24rem); }
+      .hero-art__surface { min-height: 20rem; aspect-ratio: 1.15; }
+      .hero-art__fallback { padding: .45rem; }
+
+    }
+    @media (max-width: 620px) {
+      :root { --gutter: 1rem; }
+      .site-head { top: .35rem; min-height: 2.85rem; padding: .45rem .75rem; }
+      .site-name { font-size: .95rem; }
+      .opening { padding-block: 2.4rem 1.4rem; }
+      .opening h1 { font-size: clamp(3.3rem,14vw,5.5rem); }
+      .hero-art { width: min(100%,21rem); }
+      .hero-art__surface { min-height: 18rem; }
+      .index-row { width: 100%; justify-content: flex-start; border-radius: 1.1rem; gap: .15rem; padding: .45rem; }
+      .index-label { width: 100%; padding: .15rem .65rem .25rem; }
+      .filter-button { min-height: 2.65rem; padding-inline: .75rem; font-size: .84rem; }
+      .field { --panel-gap: 1rem; padding-bottom: 3rem; }
+      .panel-pair { flex-direction: column; }
+      .panel-pair > .piece,.panel-pair--lead > .piece:first-child,.panel-pair--lead > .piece:last-child { flex: 0 1 auto; width: 100%; max-width: 100%; }
+      .article-copy { padding: var(--piece-inset); }
+      .article-copy h2 { font-size: 2.35rem; }
+      .record-grid,.achievement-list { grid-template-columns: 1fr; }
+      .membership-list { grid-template-columns: 1fr; gap: .1rem .8rem; }
+      .endnote { flex-direction: column; gap: .5rem; }
+    }
+    .site-head,.piece,.hero-copy,.hero-art__surface,.index-row { -webkit-backdrop-filter: blur(12px) saturate(150%); backdrop-filter: blur(12px) saturate(150%); }
+    .hero-art__surface { -webkit-backdrop-filter: blur(16px) saturate(155%); backdrop-filter: blur(16px) saturate(155%); }
+    .hero-art__canvas,.hero-art__fallback { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .hero-art__canvas { z-index: 2; overflow: hidden; opacity: 0; transition: opacity 420ms cubic-bezier(.22,1,.36,1); touch-action: none; cursor: grab; }
+    .hero-art__surface.is-3d-ready .hero-art__canvas { opacity: 1; }
+    .hero-art__canvas.is-dragging { cursor: grabbing; }
+    .hero-art__canvas canvas { display: block; width: 100%; height: 100%; }
+    .hero-art__fallback { z-index: 1; object-fit: contain; filter: drop-shadow(0 18px 20px rgba(48,23,17,.18)); transition: opacity 420ms cubic-bezier(.22,1,.36,1); }
+    .hero-art__surface.is-3d-ready .hero-art__fallback { opacity: 0; animation: none; }
+    .duckie-web-cursor { display: none; position: fixed; z-index: 120; top: 0; left: 0; width: 48px; height: 48px; transform: translate3d(-100px,-100px,0); background: url("assets/duckie-cursor-strip.png") 0 0 / 288px 48px no-repeat; image-rendering: pixelated; opacity: 0; visibility: hidden; transition: opacity 180ms ease,visibility 180ms ease; pointer-events: none; will-change: transform; }
+    .duckie-web-cursor.is-visible { opacity: 1; visibility: visible; }
+    @media (hover: hover) and (pointer: fine) { .duckie-web-cursor { display: block; } }
+    body.has-duckie-cursor,body.has-duckie-cursor * { cursor: none !important; }
+    body.has-duckie-cursor .duckie-web-cursor { display: block; animation: duckie-cursor-frames .9s steps(1,end) infinite; }
+    @keyframes duckie-cursor-frames { 0%,16.65% { background-position: 0 0; } 16.66%,33.31% { background-position: -48px 0; } 33.32%,49.97% { background-position: -96px 0; } 49.98%,66.63% { background-position: -144px 0; } 66.64%,83.29% { background-position: -192px 0; } 83.3%,100% { background-position: -240px 0; } }
+    .scroll-mark { position: fixed; z-index: 1; right: var(--gutter); bottom: 1.25rem; width: min(72vw,12ch); color: rgba(255,244,227,.11); font: 500 clamp(1.5rem,3.8vw,4rem)/.95 var(--serif); letter-spacing: -.035em; text-align: right; text-wrap: balance; pointer-events: none; user-select: none; transition: transform 620ms cubic-bezier(.22,1,.36,1),color 320ms ease; }
+    body[data-active="work"] .scroll-mark { transform: translate(-1vw,-.5vh) rotate(-3deg); }
+    body[data-active="leadership"] .scroll-mark { transform: translate(-1vw,-1vh) rotate(2deg); }
+    body[data-active="profile"] .scroll-mark { transform: translate(-2vw,-.5vh) rotate(-2deg); }
+    .opening h1 { font-size: clamp(3.6rem,8.4vw,7.4rem); line-height: .87; letter-spacing: -.075em; }
+    .identity-pills { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+    .identity-pills li { padding: .42rem .75rem; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: linear-gradient(145deg,rgba(255,255,255,.38),rgba(255,255,255,.12)),rgba(255,248,235,.42); box-shadow: inset 0 1px 0 rgba(255,255,255,.85),0 5px 14px rgba(67,27,12,.08); color: var(--ink); font-size: var(--type-label); font-weight: 720; line-height: 1.25; -webkit-backdrop-filter: blur(8px) saturate(135%); backdrop-filter: blur(8px) saturate(135%); transition: transform 300ms cubic-bezier(.22,1,.36,1),background-color 280ms ease,border-color 280ms ease; }
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) { .identity-pills li:hover { border-color: rgba(255,255,255,.96); box-shadow: inset 0 1px 0 rgba(255,255,255,.95),0 8px 20px rgba(67,27,12,.13); transform: translateY(-2px); } }
+    .hero-intro { display: block; max-width: 38ch; margin: 0; color: var(--ink-soft); font-size: clamp(1rem,1.3vw,1.12rem); font-weight: 560; line-height: 1.55; text-wrap: balance; }
+    @supports (max-width: 1cqi) {
+      .piece p { max-width: 100cqi; }
+      .piece li { max-width: 100cqi; }
+      .piece p.meta { max-width: 100cqi; }
+      .piece .article-copy blockquote { max-width: 100cqi; }
+      .hero-copy .hero-intro { max-width: 100cqi; }
+    }
+    .piece-top { align-items: baseline; font-family: var(--mono); font-size: var(--type-meta); line-height: 1.45; letter-spacing: .01em; }
+    .piece-top span:first-child { color: var(--orange-deep); font-family: var(--sans); font-size: var(--type-label); font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    .piece-top span:last-child { max-width: 58%; color: var(--muted); font-weight: 520; }
+    .piece-top span { text-wrap: balance; }
+    .keep-together { white-space: nowrap; }
+    .piece h2,.piece h3 { text-wrap: balance; }
+    .piece--clip h2 { max-width: 22ch; font-size: clamp(1.45rem,2.15vw,2.05rem); line-height: 1.04; letter-spacing: -.035em; }
+    @supports (font-size: 1cqi) {
+      .piece h2,.piece h3 { font-size: clamp(1.55rem,calc(1.25rem + 2.2cqi),2.4rem); }
+      .piece--clip h2 { font-size: clamp(1.45rem,calc(1.18rem + 1.9cqi),2.05rem); }
+      .piece .record-grid h3,.piece .membership-section h3 { font-size: clamp(1.125rem,calc(1.05rem + .4vw),1.3rem); }
+    }
+    .article-copy h2 { max-width: 16ch; font-size: clamp(2rem,3.8vw,4rem); line-height: .98; letter-spacing: -.055em; }
+    .piece--clip .piece-top,.piece--achievements .piece-top { padding: 0 0 .65rem; }
+    .meta { max-width: 100%; font-family: var(--mono); font-size: var(--type-meta); line-height: 1.5; letter-spacing: 0; text-wrap: pretty; }
+    .piece--tinker .record-list li { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem 1rem; padding: .58rem 0; }
+    .piece--tinker .record-list span { text-align: right; font-size: var(--type-meta); line-height: 1.4; }
+    .achievement-list li,.membership-list li { display: grid; grid-template-columns: minmax(0,1fr); align-content: start; gap: .22rem; padding: .72rem 0; border-top: 1px solid rgba(48,23,17,.14); }
+    .achievement-list li::before,.membership-list li::before { content: none; display: none; }
+    .achievement-list strong,.membership-list strong { grid-column: auto; color: var(--ink); font-size: .96rem; line-height: 1.28; }
+    .achievement-list span,.membership-list span,.achievement-list a { grid-column: auto; color: var(--muted); font-size: .82rem; line-height: 1.42; }
+    .achievement-list a { width: fit-content; margin-top: .12rem; color: var(--orange-deep); font-size: var(--type-label); }
+    .membership-list li { min-height: 0; }
+    .membership-list li:not(:has(> details)) { grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: .35rem .75rem; }
+    .membership-list li > strong { grid-column: 1; grid-row: 1; }
+    .membership-list li > span { grid-column: 2; grid-row: 1; text-align: right; white-space: nowrap; }
+    .piece abbr[title] { cursor: help; text-decoration: none; }
+    .piece abbr[title]:focus-visible { outline: 2px solid var(--orange-deep); outline-offset: 2px; border-radius: .12em; }
+    .org-detail summary { display: grid; grid-template-columns: minmax(0,1fr) auto auto; align-items: baseline; gap: .08rem .5rem; cursor: pointer; list-style: none; }
+    .org-detail summary::-webkit-details-marker { display: none; }
+    .org-detail summary strong { grid-column: 1; grid-row: 1; }
+    .org-detail summary span { grid-column: 2; grid-row: 1; white-space: nowrap; text-align: right; }
+    .org-detail summary::after { content: "+"; grid-column: 3; grid-row: 1; align-self: center; color: var(--orange-deep); font-size: .8rem; font-weight: 800; }
+    .org-detail[open] summary::after { content: "−"; }
+    .org-expansion { display: block; margin: .35rem 0 0; color: var(--muted); font-size: var(--type-label); line-height: 1.5; }
+    .org-detail summary { transition: color 180ms ease,transform 180ms ease; }
+    .org-detail summary:hover { color: var(--orange-deep); }
+    .org-detail summary::after { transition: transform 220ms cubic-bezier(.22,1,.36,1),color 220ms ease; }
+    .org-detail[open] summary::after { transform: rotate(180deg); }
+    .detail-list li { line-height: 1.45; }
+    .article-copy blockquote { text-align: justify; text-align-last: start; text-wrap: pretty; }
+    .event-stats { display: flex; flex-wrap: wrap; gap: .8rem 1.6rem; margin-top: .45rem; padding: .65rem 0 !important; border-top: 1px solid rgba(255,244,227,.25); background: transparent; }
+    .event-stats span { display: grid; gap: .1rem; }
+    .event-stats strong { color: #ffe0a0 !important; font: 750 1.45rem/1 var(--serif); }
+    .event-stats small { color: rgba(255,244,227,.82); font: 600 var(--type-label)/1.4 var(--sans); }
+    .contact-icon { display: grid; width: 3rem; height: 3rem; place-items: center; text-decoration: none; transition: transform 140ms ease; }
+    .contact-icon:hover { transform: translateY(-2px); }
+    .contact-icon__img { display: block; width: 3rem; height: 3rem; object-fit: contain; image-rendering: pixelated; }
+
+    @media (max-width: 620px) {
+      .opening h1 { max-width: 100%; font-size: clamp(3.25rem,13vw,5rem); }
+      .hero-intro { font-size: .9rem; line-height: 1.45; }
+      .hero-art__surface { width: 100%; min-height: 0; aspect-ratio: 1.15; }
+      .scroll-mark { right: var(--gutter); bottom: 1rem; width: min(82vw,14ch); }
+      .index-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .18rem; }
+      .index-label { grid-column: 1 / -1; width: auto; }
+      .filter-button { width: 100%; min-width: 0; padding-inline: .45rem; font-size: .85rem; white-space: normal; }
+      .piece-top { align-items: flex-start; }
+      .piece-top span:last-child { max-width: 62%; }
+      .record-list li { display: grid; grid-template-columns: 1fr; gap: .12rem; }
+      .record-list span { text-align: left; }
+    }
+    @media (prefers-reduced-transparency: reduce) { .site-head,.piece,.hero-copy,.hero-art__surface,.index-row { -webkit-backdrop-filter: none; backdrop-filter: none; } .site-head,.hero-copy,.hero-art__surface { background: rgba(255,248,235,.96); } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .autumn-backdrop__layer--1,.autumn-backdrop__layer--2,.autumn-backdrop__layer--3,.autumn-backdrop__layer--4,.autumn-backdrop__layer--5 { animation: none !important; }
+      .identity-pills li,.piece,.hero-copy,.filter-button,.scroll-mark,.contact-icon { transition: color 140ms ease,background-color 140ms ease,border-color 140ms ease,opacity 140ms ease !important; }
+      .piece,.hero-copy,.filter-button,.scroll-mark,.contact-icon { transform: none !important; translate: none !important; }
+      .duck-walker.is-bottom-hint .duck-walk-hint { animation: none !important; opacity: 1; transform: translate(-50%,0); }
+      .duckie-web-cursor { animation: none !important; }
+      .duckie-web-cursor.is-visible { background-position: 0 0; }
+      .hero-art__canvas,.hero-art__fallback { transition: none !important; }
+    }
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"./assets/vendor/three.module.js"}}
+  </script>
+</head>
+<body data-active="work">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="autumn-backdrop" aria-hidden="true">
+    <span class="autumn-backdrop__layer autumn-backdrop__layer--5"></span>
+    <span class="autumn-backdrop__layer autumn-backdrop__layer--4"></span>
+    <span class="autumn-backdrop__layer autumn-backdrop__layer--3"></span>
+    <span class="autumn-backdrop__layer autumn-backdrop__layer--2"></span>
+    <span class="autumn-backdrop__layer autumn-backdrop__layer--1"></span>
+  </div>
+  <div class="scroll-mark" aria-hidden="true">Work</div>
+  <div class="duckie-web-cursor" aria-hidden="true"></div>
+  <div class="duck-stage"><div class="duck-walker"><span class="duck-walk-hint" aria-hidden="true">Tap</span><button class="ducky" type="button" aria-label="Tap to return to the top" title="Tap to return to the top" aria-description="Walking-duck artwork by Tanporo."><span class="ducky-sprite" aria-hidden="true"></span></button></div></div>
+  <audio id="duck-quack" src="assets/duck-quack-trimmed.wav" preload="none" aria-hidden="true" title="Duck quack from the supplied Freesound recording, sound 40345."></audio>
+  <header class="site-head shell"><p class="site-name">Marvin Caruncho</p></header>
+
+  <main id="main" class="shell">
+    <section id="top" class="opening" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>I write.</span><span>I tinker.</span><span>I learn.</span></h1>
+        <ul class="identity-pills" aria-label="A few things about Marvin">
+          <li>LAVOXA writer</li>
+          <li>Tech tinkerer</li>
+          <li>English education student</li>
+        </ul>
+        <p class="hero-intro">Curious about language, stories, and how things work.</p>
+      </div>
+      <figure class="hero-art">
+        <div class="hero-art__surface">
+          <div class="hero-art__canvas" id="duck-model" aria-hidden="true" title="A yellow 3D rubber duck by JDSherbert"></div>
+          <picture><source srcset="assets/rubber-duck-hero.webp" type="image/webp"><img class="hero-art__fallback" id="duck-fallback" src="assets/rubber-duck-hero.png" alt="A yellow 3D rubber duck by JDSherbert" title="A yellow 3D rubber duck by JDSherbert" width="733" height="772" fetchpriority="high"></picture>
+        </div>
+      </figure>
+    </section>
+
+
+    <div class="index-row" role="group" aria-label="Filter portfolio content">
+      <span class="index-label">Show</span>
+      <button class="filter-button" type="button" data-filter="all" aria-pressed="true" aria-controls="field">All</button>
+      <button class="filter-button" type="button" data-filter="work" aria-pressed="false" aria-controls="field">Work</button>
+      <button class="filter-button" type="button" data-filter="leadership" aria-pressed="false" aria-controls="field">Leadership &amp; service</button>
+      <button class="filter-button" type="button" data-filter="profile" aria-pressed="false" aria-controls="field">Profile</button>
+    </div>
+    <p class="filter-status" id="filter-status" aria-live="polite">Showing everything.</p>
+
+    <div class="field" id="field">
+      <div class="panel-pair panel-pair--lead">
+      <article class="piece piece--life" data-category="leadership" aria-labelledby="life-title">
+        <h2 id="life-title">Educators’ Circle</h2>
+        <ul class="detail-list">
+          <li><strong>Lux et Fides</strong> · “The Light Within the Educator’s Heart” · 19 September 2026</li>
+          <li>Co-led; handled reservations, email follow-up, setup checks, and program coordination.</li>
+          <li class="event-stats"><span><strong>43</strong><small>attended · 35 expected</small></span><span><strong>4.95/5</strong><small>evaluation</small></span></li>
+        </ul>
+      </article>
+      <article class="piece piece--achievements" data-category="leadership profile" aria-labelledby="achievements-title">
+        <div class="piece-top"><span>Recognition</span></div>
+        <h2 id="achievements-title">Recognition &amp; academic standing</h2>
+        <ul class="achievement-list">
+          <li><strong>5th Place · Development Reporting</strong><span><abbr tabindex="0" title="Organization of Student Services Educators, Inc.">OSSEI</abbr> 19th Writing Competition · 2025</span><a href="https://lavoxa.org/lavoxa-triumphs-in-national-journalism-conventions/" target="_blank" rel="noopener noreferrer">LAVOXA report</a></li>
+          <li><strong>1st Place · Radio Broadcast of the Year</strong><span><abbr tabindex="0" title="School Press Advisers’ Movement">SPAM</abbr> 16th <abbr tabindex="0" title="National Campus Media Conference">NCMC</abbr> · 2025 · Team award; contributed scriptwriting and technical work.</span><a href="https://lavoxa.org/lavoxa-bags-accolades-in-spams-16th-ncmc/" target="_blank" rel="noopener noreferrer">LAVOXA report</a></li>
+          <li><strong>Dean’s List</strong><span>Year 1 · both semesters; Year 2 · first semester.</span></li>
+        </ul>
+      </article>
+      </div>
+      <article class="piece piece--record" id="record" data-category="profile leadership" aria-labelledby="record-title">
+        <div class="record-heading">
+          <h2 id="record-title">Education and experience</h2>
+        </div>
+        <div class="record-grid">
+          <section aria-labelledby="roles-title">
+            <h3 id="roles-title">Experience &amp; leadership</h3>
+            <ul class="record-list">
+              <li><strong>Third Year Representative</strong><span>Educators’ Circle · AY 2026–2027</span></li>
+              <li><strong>News Editor</strong><span>LAVOXA Online, AY 2025–2026</span></li>
+              <li><strong>Staff Writer</strong><span>LAVOXA Online, 2024–present</span></li>
+            </ul>
+          </section>
+          <section aria-labelledby="education-title">
+            <h3 id="education-title">Education</h3>
+            <ul class="record-education">
+              <li>
+                <strong>Bachelor of Secondary Education, major in English</strong>
+                <span>De La Salle Lipa · 2024–present</span>
+              </li>
+              <li>
+                <div class="education-title">
+                  <abbr tabindex="0" title="Humanities and Social Sciences">HUMSS</abbr>
+                </div>
+                <span>Cuenca Institute · 2022–2024</span>
+              </li>
+              <li>
+                <strong>Alternative Learning System</strong>
+                <span>ALS Cuenca · 2020–2022</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <section class="membership-section" aria-labelledby="organizations-title">
+          <h3 id="organizations-title">Organizations &amp; memberships</h3>
+          <ul class="membership-list">
+            <li><strong><abbr tabindex="0" title="Compassionate Lasallians for Animal Welfare and Stray">CLAWS</abbr></strong><span>Volunteer · 2024–2026</span></li>
+            <li><strong><abbr tabindex="0" title="Lasallian Alliance of Youth Advocates for Equality">LAYA</abbr></strong><span>2025–2026</span></li>
+            <li><strong>Les Lasallian Lumieres</strong><span>2024–present</span></li>
+            <li><strong><abbr tabindex="0" title="Anime Manga Collective">ANIMACO</abbr></strong><span>2025–2026</span></li>
+            <li><details class="org-detail"><summary><strong><abbr tabindex="0" title="De La Salle Lipa">DLSL</abbr> Debate Society</strong><span>2025–2026</span></summary><p class="org-expansion">Renamed <abbr tabindex="0" title="De La Salle Lipa">DLSL</abbr> Retorika after this membership period.</p></details></li>
+            <li><strong><abbr tabindex="0" title="De La Salle Lipa">DLSL</abbr> Developer Society</strong><span>2025–2026</span></li>
+            <li><strong><abbr tabindex="0" title="De La Salle Lipa Environmental Ambassadors Reviving Nature Through Hand-in-Hand Service">DLSL EARTH</abbr></strong><span>2025–2026</span></li>
+            <li><strong><abbr tabindex="0" title="De La Salle Lipa">DLSL</abbr> Film Society</strong><span>2025–2026</span></li>
+          </ul>
+        </section>
+      </article>
+      <article class="piece piece--writing" id="write" data-category="work" aria-labelledby="write-title">
+        <div class="piece-top"><span>Published post</span><span>LAVOXA Online, 24 January 2026</span></div>
+        <div class="article-layout">
+          <div class="article-copy">
+            <h2 id="write-title">International Day of Education</h2>
+            <p class="meta">Writer: Marvin Caruncho</p>
+            <blockquote>“This International Day of Education, let us demand greater investment in our school facilities and improve the relevance of the curriculum to the learners’ needs.”</blockquote>
+            <p class="source-link"><a class="text-link" href="https://www.facebook.com/share/p/19rN8WXgoz/" target="_blank" rel="noopener noreferrer">View original post on Facebook</a></p>
+          </div>
+          <figure class="mockup-stage mockup-stage--flyer" tabindex="0">
+            <div class="print-mockup print-mockup--flyer">
+              <img src="assets/international-day-of-education.jpg" alt="LAVOXA Online International Day of Education flyer: a student reading above a stack of books, with a chalkboard and writing tools. Layout and photomanipulation by Bea Bolaños." title="Layout and photomanipulation by Bea Bolaños." width="1200" height="1200" loading="lazy" decoding="async">
+            </div>
+          </figure>
+        </div>
+      </article>
+      <article class="piece piece--clip" id="tabloid-work" data-category="work" aria-labelledby="tabloid-title">
+        <div class="piece-top"><span>News report</span><span>LAVOXA Tabloid · Volume XXIX, Issue 1</span></div>
+        <h2 id="tabloid-title"><abbr tabindex="0" title="De La Salle Lipa">DLSL</abbr>’s new academic policies stir mixed reactions</h2>
+        <p class="meta">By Marvin Caruncho and Janice Marian C. Zara</p>
+        <figure class="mockup-stage mockup-stage--booklet" tabindex="0">
+          <div class="print-mockup print-mockup--booklet">
+            <img src="assets/lavoxa-academic-policies.webp" alt="" width="1340" height="1000" loading="lazy" decoding="async">
+          </div>
+        </figure>
+        <a class="text-link" href="https://indd.adobe.com/view/23929abf-9844-4eba-ab59-b54f9df48b13" target="_blank" rel="noopener noreferrer">View full issue</a>
+      </article>
+      <article class="piece piece--clip" id="frosh-guide" data-category="work" aria-labelledby="frosh-title">
+        <div class="piece-top"><span>Guide contribution</span><span>Frosh Guide 2025 · pp. 19–20</span></div>
+        <h2 id="frosh-title">Fighting the Flames: Survival Tips for Exams Week</h2>
+        <p class="meta">Words by Marvin Caruncho · Art by Mariell Ham &amp; <span class="keep-together">Louis Evan Gabriel Vinas</span></p>
+        <figure class="mockup-stage mockup-stage--booklet" tabindex="0">
+          <div class="print-mockup print-mockup--booklet">
+            <img src="assets/frosh-guide-exams.webp" alt="Frosh Guide 2025 spread, pages 19–20: Fighting the Flames: Survival Tips for Exams Week, words by Marvin Caruncho, with study-tip illustrations by Mariell Ham and Louis Evan Gabriel Vinas." width="1332" height="939" loading="lazy" decoding="async">
+          </div>
+        </figure>
+        <a class="text-link" href="https://indd.adobe.com/view/b348b7dd-367d-4b2b-9de2-ac98cc3c5557" target="_blank" rel="noopener noreferrer">View full guide</a>
+      </article>
+      <div class="panel-pair">
+      <article class="piece piece--research" data-category="work" aria-labelledby="research-title">
+        <h2 id="research-title">Words for Peace</h2>
+        <p class="research-status">Proposal under review · No findings yet</p>
+        <p>Exploring Peace Linguistics-informed Grade 12 English speaking materials and <span class="keep-together">peace-values awareness</span>.</p>
+      </article>
+      <article class="piece piece--tinker" id="tinker" data-category="profile" aria-labelledby="tinker-title">
+        <h2 id="tinker-title">Technical skills &amp; tools</h2>
+        <ul class="record-list">
+          <li><strong>Operating system</strong><span>Arch Linux</span></li>
+          <li><strong>Device setup</strong><span>Laptop and phone tuning, debloating</span></li>
+          <li><strong>Troubleshooting</strong><span>Software and devices</span></li>
+        </ul>
+      </article>
+      </div>
+
+    </div>
+
+
+
+    <footer class="endnote" id="contact">
+      <nav class="contact-links" aria-label="Contact Marvin Caruncho">
+        <a class="contact-icon" href="mailto:marvin_caruncho@dlsl.edu.ph" aria-label="Email Marvin at marvin_caruncho@dlsl.edu.ph" title="Email Marvin"><img class="contact-icon__img" src="assets/email-icon.png" alt="" width="32" height="32"></a>
+        <a class="contact-icon" href="https://www.linkedin.com/in/marvin-caruncho-4813263a8" target="_blank" rel="noopener noreferrer" aria-label="Marvin on LinkedIn" title="LinkedIn"><img class="contact-icon__img" src="assets/linkedin-icon.png" alt="" width="32" height="32"></a>
+        <a class="contact-icon" href="https://www.facebook.com/marvin.caruncho.5" target="_blank" rel="noopener noreferrer" aria-label="Marvin on Facebook" title="Facebook"><img class="contact-icon__img" src="assets/facebook-icon.png" alt="" width="48" height="48"></a>
+        <a class="contact-icon" href="https://www.instagram.com/zsleepy_y" target="_blank" rel="noopener noreferrer" aria-label="Marvin on Instagram" title="Instagram"><img class="contact-icon__img" src="assets/instagram-icon.png" alt="" width="48" height="48"></a>
+      </nav>
+      <p class="footer-name">Marvin Caruncho</p>
+      <p class="duck-note">No ducks were harmed in the making of this website.</p>
+    </footer>
+  </main>
+
+  <script>
+    (() => {
+      const body = document.body;
+      const duck = document.querySelector('.ducky');
+      const status = document.querySelector('#filter-status');
+      const mark = document.querySelector('.scroll-mark');
+      const webCursor = document.querySelector('.duckie-web-cursor');
+      const duckWalker = document.querySelector('.duck-walker');
+      let bottomHintTimer = 0;
+      let wasAtBottom = false;
+      const updateBottomHint = () => {
+        const remaining = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight);
+        const atBottom = remaining <= 88;
+        if (atBottom && !wasAtBottom) {
+          wasAtBottom = true;
+          if (duckWalker) {
+            duckWalker.classList.remove('is-bottom-hint');
+            void duckWalker.offsetWidth;
+            duckWalker.classList.add('is-bottom-hint');
+            window.clearTimeout(bottomHintTimer);
+            bottomHintTimer = window.setTimeout(() => duckWalker.classList.remove('is-bottom-hint'), 2600);
+          }
+        } else if (!atBottom && wasAtBottom) {
+          wasAtBottom = false;
+          window.clearTimeout(bottomHintTimer);
+          duckWalker?.classList.remove('is-bottom-hint');
+        }
+      };
+      updateBottomHint();
+      window.addEventListener('scroll', updateBottomHint, { passive: true });
+      window.addEventListener('resize', updateBottomHint, { passive: true });
+      const backdrop = document.querySelector('.autumn-backdrop');
+      if (backdrop && 'IntersectionObserver' in window) {
+        new IntersectionObserver(([entry]) => {
+          backdrop.classList.toggle('is-visible', entry.isIntersecting);
+        }, { rootMargin: '80px 0px' }).observe(backdrop);
+      } else {
+        backdrop?.classList.add('is-visible');
+      }
+      document.querySelectorAll('.org-detail').forEach((detail) => {
+        const summary = detail.querySelector('summary');
+        const content = detail.querySelector('.org-expansion');
+        if (!summary || !content) return;
+        summary.addEventListener('click', (event) => {
+          event.preventDefault();
+          if (detail.dataset.animating === 'true') return;
+          const opening = !detail.open;
+          detail.dataset.animating = 'true';
+          if (opening) detail.open = true;
+          const from = opening ? 0 : content.getBoundingClientRect().height;
+          const to = opening ? content.scrollHeight : 0;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            detail.open = opening;
+            delete detail.dataset.animating;
+            return;
+          }
+          const animation = content.animate([{ height: `${from}px`, opacity: opening ? 0 : 1, transform: `translateY(${opening ? '-4px' : '0'})` }, { height: `${to}px`, opacity: opening ? 1 : 0, transform: `translateY(${opening ? '0' : '-4px'})` }], { duration: 320, easing: 'cubic-bezier(.22,1,.36,1)' });
+          if (!opening) content.style.overflow = 'hidden';
+          animation.onfinish = () => {
+            detail.open = opening;
+            content.style.removeProperty('height');
+            content.style.removeProperty('opacity');
+            content.style.removeProperty('transform');
+            content.style.removeProperty('overflow');
+            delete detail.dataset.animating;
+          };
+        });
+      });
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (webCursor && finePointer) {
+        let imageReady = false;
+        let pointer = null;
+        let x = -100, y = -100, frame = 0;
+        const moveCursor = () => {
+          frame = 0;
+          if (!pointer) return;
+          x += (pointer.x - x) * .42;
+          y += (pointer.y - y) * .42;
+          if (Math.abs(pointer.x - x) < .3 && Math.abs(pointer.y - y) < .3) { x = pointer.x; y = pointer.y; }
+          webCursor.style.transform = `translate3d(${x}px,${y}px,0)`;
+          if (x !== pointer.x || y !== pointer.y) frame = requestAnimationFrame(moveCursor);
+        };
+        const showCursor = () => {
+          if (!imageReady || !pointer) return;
+          if (!frame) frame = requestAnimationFrame(moveCursor);
+          webCursor.classList.add('is-visible');
+          body.classList.add('has-duckie-cursor');
+        };
+        const cursorImage = new Image();
+        cursorImage.onload = () => { imageReady = true; showCursor(); };
+        cursorImage.src = 'assets/duckie-cursor-strip.png';
+        window.addEventListener('pointermove', (event) => {
+          if (event.pointerType === 'touch') return;
+          if (!pointer && event.movementX === 0 && event.movementY === 0) return;
+          pointer = { x: event.clientX, y: event.clientY };
+          showCursor();
+        }, { passive: true });
+        const hideCursor = () => { webCursor.classList.remove('is-visible'); body.classList.remove('has-duckie-cursor'); };
+        window.addEventListener('blur', hideCursor);
+        document.documentElement.addEventListener('mouseleave', hideCursor);
+      }
+      const setDuckTravelDuration = () => {
+        const travelDistance = window.innerWidth + 96;
+        const pixelsPerSecond = 28;
+        body.style.setProperty('--duck-travel-duration', `${(travelDistance / pixelsPerSecond).toFixed(2)}s`);
+      };
+      setDuckTravelDuration();
+      window.addEventListener('resize', setDuckTravelDuration, { passive: true });
+      const quackSound = document.querySelector('#duck-quack');
+      const maxQuackVoices = 12;
+      const fallbackQuacks = new Set();
+      let quackContext = null;
+      let quackBus = null;
+      let quackBufferPromise = null;
+      let activeQuacks = 0;
+      let nextQuackStart = 0;
+      let quackSuspendTimer = 0;
+
+      const suspendWhenQuiet = () => {
+        window.clearTimeout(quackSuspendTimer);
+        if (activeQuacks > 0) return;
+        quackSuspendTimer = window.setTimeout(() => {
+          quackSuspendTimer = 0;
+          if (activeQuacks === 0 && quackContext?.state === 'running') {
+            quackContext.suspend().catch(() => {});
+          }
+        }, 2000);
+      };
+
+      const playFallbackQuack = () => {
+        if (!quackSound || fallbackQuacks.size >= maxQuackVoices) return;
+        const voice = quackSound.cloneNode(false);
+        fallbackQuacks.add(voice);
+        const release = () => {
+          fallbackQuacks.delete(voice);
+          voice.remove();
+        };
+        voice.addEventListener('ended', release, { once: true });
+        voice.play().catch(release);
+      };
+
+      const playDuckQuack = async () => {
+        if (!quackSound) return;
+        const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContextConstructor) return playFallbackQuack();
+        if (activeQuacks >= maxQuackVoices) return;
+        activeQuacks += 1;
+        window.clearTimeout(quackSuspendTimer);
+        quackSuspendTimer = 0;
+        let voice;
+        try {
+          if (!quackContext) {
+            quackContext = new AudioContextConstructor();
+            quackBus = quackContext.createDynamicsCompressor();
+            quackBus.threshold.value = -8;
+            quackBus.knee.value = 8;
+            quackBus.ratio.value = 8;
+            quackBus.attack.value = .004;
+            quackBus.release.value = .12;
+            quackBus.connect(quackContext.destination);
+          }
+          if (quackContext.state === 'suspended') await quackContext.resume();
+          quackBufferPromise ||= fetch(quackSound.currentSrc || quackSound.src, { cache: 'force-cache' })
+            .then((response) => {
+              if (!response.ok) throw new Error('Quack audio could not be loaded.');
+              return response.arrayBuffer();
+            })
+            .then((data) => quackContext.decodeAudioData(data));
+          const buffer = await quackBufferPromise;
+          voice = quackContext.createBufferSource();
+          voice.buffer = buffer;
+          voice.connect(quackBus || quackContext.destination);
+          voice.addEventListener('ended', () => {
+            activeQuacks -= 1;
+            voice.disconnect();
+            suspendWhenQuiet();
+          }, { once: true });
+          const when = Math.max(quackContext.currentTime, nextQuackStart);
+          nextQuackStart = when + .018;
+          voice.start(when);
+        } catch {
+          activeQuacks = Math.max(0, activeQuacks - 1);
+          voice?.disconnect();
+          playFallbackQuack();
+          suspendWhenQuiet();
+        }
+      };
+      document.addEventListener('duck:quack', playDuckQuack);
+      duck.addEventListener('click', () => {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+        playDuckQuack();
+        if (!reducedMotion) {
+          duck.classList.remove('is-jumping');
+          requestAnimationFrame(() => duck.classList.add('is-jumping')); 
+          window.setTimeout(() => duck.classList.remove('is-jumping'), 700);
+        }
+      });
+      const buttons = [...document.querySelectorAll('[data-filter]')];
+      const pieces = [...document.querySelectorAll('.piece[data-category]')];
+      const field = document.querySelector('.field');
+      const labels = { work: 'work', leadership: 'leadership and service', profile: 'profile' };
+      const markerNames = { work: 'Work', leadership: 'Leadership & service', profile: 'Profile' };
+      let hoveredPiece = null;
+      const inViewPieces = new Set();
+      const setMarker = (piece) => {
+        if (!piece || piece.hidden) return;
+        const categories = piece.dataset.category.split(/\s+/);
+        const active = categories.find((value) => markerNames[value]) || 'work';
+        const isMixed = categories.includes('leadership') && categories.includes('profile');
+        const name = isMixed ? 'Leadership & service + Profile' : markerNames[active];
+        body.dataset.active = active;
+        if (mark && mark.textContent !== name) mark.textContent = name;
+      };
+      const nearestVisiblePiece = () => {
+        const intersecting = [...inViewPieces].filter((piece) => !piece.hidden);
+        const candidates = intersecting.length ? intersecting : pieces.filter((piece) => !piece.hidden);
+        return candidates.sort((a,b) => Math.abs(a.getBoundingClientRect().top - innerHeight * .4) - Math.abs(b.getBoundingClientRect().top - innerHeight * .4))[0] || null;
+      };
+      const updateMarker = () => {
+        const focused = document.activeElement?.closest?.('.piece[data-category]');
+        const active = hoveredPiece && !hoveredPiece.hidden ? hoveredPiece : focused && !focused.hidden ? focused : nearestVisiblePiece();
+        if (active) setMarker(active);
+      };
+      if (mark) { body.dataset.active = 'work'; mark.textContent = markerNames.work; }
+      if (field) {
+        field.addEventListener('pointerover', (event) => {
+          if (event.pointerType === 'touch') return;
+          const piece = event.target instanceof Element ? event.target.closest('.piece[data-category]') : null;
+          if (piece && !piece.hidden) { hoveredPiece = piece; setMarker(piece); }
+        });
+        field.addEventListener('pointerout', (event) => {
+          const piece = event.target instanceof Element ? event.target.closest('.piece[data-category]') : null;
+          const next = event.relatedTarget instanceof Element ? event.relatedTarget.closest('.piece[data-category]') : null;
+          if (piece && piece !== next && hoveredPiece === piece) { hoveredPiece = null; updateMarker(); }
+        });
+      }
+      document.addEventListener('focusin', (event) => {
+        const piece = event.target instanceof Element ? event.target.closest('.piece[data-category]') : null;
+        if (hoveredPiece && !hoveredPiece.hidden) setMarker(hoveredPiece);
+        else if (piece && !piece.hidden) setMarker(piece);
+      });
+      document.addEventListener('focusout', () => requestAnimationFrame(updateMarker));
+      let markerScrollTimer = 0;
+      window.addEventListener('scroll', () => {
+        if (markerScrollTimer) return;
+        markerScrollTimer = window.setTimeout(() => { markerScrollTimer = 0; updateMarker(); }, 100);
+      }, { passive: true });
+      if ('IntersectionObserver' in window) {
+        const markerObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => { if (entry.isIntersecting && !entry.target.hidden) inViewPieces.add(entry.target); else inViewPieces.delete(entry.target); });
+          updateMarker();
+        }, { rootMargin: '-30% 0px -52% 0px', threshold: 0 });
+        pieces.forEach((piece) => markerObserver.observe(piece));
+      }
+      let filterChangeId = 0;
+      buttons.forEach((button) => button.addEventListener('click', async () => {
+        if (button.getAttribute('aria-pressed') === 'true') return;
+        const active = button.dataset.filter;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const changeId = ++filterChangeId;
+        const wantsVisible = (piece) => active === 'all' || piece.dataset.category.split(/\s+/).includes(active);
+        const beforeRects = new Map(pieces.filter((piece) => !piece.hidden).map((piece) => [piece, piece.getBoundingClientRect()]));
+        pieces.forEach((piece) => {
+          piece.__filterAnimation?.cancel();
+          piece.__filterAnimation = null;
+        });
+        buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        const leaving = pieces.filter((piece) => !piece.hidden && !wantsVisible(piece));
+        leaving.forEach((piece) => {
+          piece.inert = true;
+          piece.setAttribute('aria-hidden', 'true');
+        });
+        if (!reduceMotion && leaving.length) {
+          const exits = leaving.map((piece) => {
+            piece.__filterAnimation = piece.animate([
+              { opacity: 1, transform: 'translateY(0)' },
+              { opacity: 0, transform: 'translateY(-6px)' }
+            ], { duration: 220, easing: 'cubic-bezier(.4,0,1,1)' });
+            return piece.__filterAnimation.finished.catch(() => {});
+          });
+          await Promise.all(exits);
+          if (changeId !== filterChangeId) return;
+        }
+        pieces.forEach((piece) => {
+          const visible = wantsVisible(piece);
+          const wasHidden = piece.hidden;
+          piece.__filterAnimation = null;
+          piece.hidden = !visible;
+          piece.inert = !visible;
+          if (visible) piece.removeAttribute('aria-hidden');
+          else piece.setAttribute('aria-hidden', 'true');
+          piece.__filterWasHidden = visible && wasHidden;
+        });
+        if (!reduceMotion) {
+          pieces.forEach((piece) => {
+            if (piece.hidden) return;
+            if (piece.__filterWasHidden) {
+              piece.__filterAnimation = piece.animate([
+                { opacity: 0, transform: 'translateY(12px) scale(.99)' },
+                { opacity: 1, transform: 'translateY(0) scale(1)' }
+              ], { duration: 420, easing: 'cubic-bezier(.22,1,.36,1)' });
+            } else {
+              const before = beforeRects.get(piece);
+              if (!before) return;
+              const after = piece.getBoundingClientRect();
+              const dx = before.left - after.left;
+              const dy = before.top - after.top;
+              if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+              piece.__filterAnimation = piece.animate([
+                { transform: `translate(${dx}px,${dy}px)` },
+                { transform: 'translate(0,0)' }
+              ], { duration: 440, easing: 'cubic-bezier(.22,1,.36,1)' });
+            }
+          });
+        }
+        const markerKey = active === 'all' ? 'work' : active;
+        body.dataset.active = markerKey;
+        if (mark) mark.textContent = markerNames[markerKey];
+        status.textContent = active === 'all' ? 'Showing everything.' : `Showing ${labels[active]}; use All to see all portfolio content.`;
+      }));
+    })();
+  </script>
+
+  <script type="module">
+    const viewport = document.querySelector('#duck-model');
+    const surface = document.querySelector('.hero-art__surface');
+    const fallback = document.querySelector('#duck-fallback');
+
+    if (viewport && surface && fallback && 'WebGLRenderingContext' in window) {
+      let initializationStarted = false;
+      const initializeDuck = async () => {
+        if (initializationStarted) return;
+        initializationStarted = true;
+        try {
+          const [THREE, { ColladaLoader }] = await Promise.all([
+            import('three'),
+            import('./assets/vendor/loaders/ColladaLoader.js')
+          ]);
+          const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+          renderer.setClearColor(0x000000, 0);
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
+          renderer.toneMapping = THREE.ACESFilmicToneMapping;
+          renderer.toneMappingExposure = 1.15;
+          viewport.appendChild(renderer.domElement);
+
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+          camera.position.set(0, 0, 4.6);
+          scene.add(new THREE.HemisphereLight(0xffecd3, 0x5c2a14, 2.15));
+          const keyLight = new THREE.DirectionalLight(0xfff3da, 2.2);
+          keyLight.position.set(-3, 4, 5);
+          scene.add(keyLight);
+          const warmFill = new THREE.DirectionalLight(0xff9d48, 1.05);
+          warmFill.position.set(3, 1.5, 2);
+          scene.add(warmFill);
+
+          let duck = null;
+          let sourceModelScale = 1;
+          let yaw = 0, pitch = 0, targetYaw = 0, targetPitch = 0;
+          let targetEyeX = 0, targetEyeZ = 0;
+          let squishStartedAt = 0;
+          let activeTouchPointer = null;
+          const eyePivots = [];
+          const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+          let isVisible = true;
+
+          const sizeRenderer = () => {
+            const { width, height } = viewport.getBoundingClientRect();
+            if (!width || !height) return;
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            if (duck && isVisible) renderer.render(scene, camera);
+          };
+          if ('ResizeObserver' in window) new ResizeObserver(sizeRenderer).observe(viewport);
+          else window.addEventListener('resize', sizeRenderer, { passive: true });
+          sizeRenderer();
+
+          let animationFrame = 0;
+          const stopAnimating = () => {
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+            animationFrame = 0;
+          };
+          renderer.domElement.addEventListener('webglcontextlost', (event) => {
+            event.preventDefault();
+            stopAnimating();
+            surface.classList.remove('is-3d-ready');
+            fallback.alt = 'A yellow 3D rubber duck by JDSherbert';
+            fallback.removeAttribute('aria-hidden');
+            viewport.setAttribute('aria-hidden', 'true');
+            viewport.removeAttribute('role');
+            viewport.removeAttribute('tabindex');
+            viewport.removeAttribute('aria-label');
+            viewport.removeAttribute('aria-description');
+          });
+          const updateEyes = (factor = 1) => {
+            eyePivots.forEach((eye) => {
+              eye.x += (targetEyeX / sourceModelScale - eye.x) * factor;
+              eye.z += (targetEyeZ / sourceModelScale - eye.z) * factor;
+              eye.pivot.position.x = eye.x;
+              eye.pivot.position.z = eye.z;
+            });
+          };
+          const updateSquish = (now) => {
+            if (!duck || !squishStartedAt) return;
+            const t = Math.min(1, (now - squishStartedAt) / 620);
+            const keys = [
+              { t: 0, x: 1, y: 1, z: 1 },
+              { t: .16, x: 1.17, y: .78, z: 1.10 },
+              { t: .40, x: .89, y: 1.18, z: .95 },
+              { t: .70, x: 1.04, y: .96, z: 1.02 },
+              { t: 1, x: 1, y: 1, z: 1 }
+            ];
+            let a = keys[0], b = keys[keys.length - 1];
+            for (let i = 1; i < keys.length; i++) {
+              if (t <= keys[i].t) { a = keys[i - 1]; b = keys[i]; break; }
+            }
+            const raw = (t - a.t) / Math.max(b.t - a.t, .0001);
+            const f = raw * raw * (3 - 2 * raw);
+            duck.scale.set(a.x + (b.x - a.x) * f, a.y + (b.y - a.y) * f, a.z + (b.z - a.z) * f);
+            if (t >= 1) {
+              squishStartedAt = 0;
+              duck.scale.set(1, 1, 1);
+            }
+          };
+          const drawFrame = (now) => {
+            animationFrame = 0;
+            if (!duck || !isVisible || reducedMotion.matches) return;
+            yaw += (targetYaw - yaw) * .11;
+            pitch += (targetPitch - pitch) * .11;
+            duck.rotation.y = yaw;
+            duck.rotation.x = pitch;
+            updateEyes(.22);
+            updateSquish(now);
+            renderer.render(scene, camera);
+            const eyesMoving = eyePivots.some((eye) =>
+              Math.abs(targetEyeX / sourceModelScale - eye.x) > .00015 ||
+              Math.abs(targetEyeZ / sourceModelScale - eye.z) > .00015
+            );
+            const duckMoving = Math.abs(targetYaw - yaw) > .0015 || Math.abs(targetPitch - pitch) > .0015;
+            if (eyesMoving || duckMoving || squishStartedAt) animationFrame = requestAnimationFrame(drawFrame);
+          };
+          const startAnimating = () => {
+            if (!reducedMotion.matches && isVisible && duck && !animationFrame) {
+              animationFrame = requestAnimationFrame(drawFrame);
+            }
+          };
+          const renderImmediate = () => {
+            if (!duck || !isVisible) return;
+            duck.rotation.y = targetYaw;
+            duck.rotation.x = targetPitch;
+            updateEyes(1);
+            renderer.render(scene, camera);
+          };
+          if ('IntersectionObserver' in window) {
+            new IntersectionObserver((entries) => {
+              isVisible = entries[0].isIntersecting;
+              if (isVisible) startAnimating(); else stopAnimating();
+            }, { threshold: .01 }).observe(surface);
+          }
+          reducedMotion.addEventListener('change', () => {
+            if (reducedMotion.matches) {
+              stopAnimating();
+              renderImmediate();
+            } else startAnimating();
+          });
+
+          const setPointerTarget = (x, y) => {
+            targetYaw = x * .56;
+            targetPitch = y * .22;
+            targetEyeX = x * .045;
+            targetEyeZ = -y * .032;
+            if (reducedMotion.matches) renderImmediate();
+            else startAnimating();
+          };
+          const followPointer = (event) => {
+            if (event.pointerType === 'touch' && event.pointerId !== activeTouchPointer) return;
+            const rect = viewport.getBoundingClientRect();
+            const duckCenterX = rect.left + rect.width / 2;
+            const duckCenterY = rect.top + rect.height / 2;
+            const x = (event.clientX - duckCenterX) / Math.max(window.innerWidth / 2, rect.width / 2, 1);
+            const y = (event.clientY - duckCenterY) / Math.max(window.innerHeight / 2, rect.height / 2, 1);
+            setPointerTarget(Math.max(-1, Math.min(1, x)), Math.max(-1, Math.min(1, y)));
+          };
+          const resetPointer = () => {
+            targetYaw = targetPitch = targetEyeX = targetEyeZ = 0;
+            activeTouchPointer = null;
+            viewport.classList.remove('is-dragging');
+            if (reducedMotion.matches) renderImmediate(); else startAnimating();
+          };
+          const quackSound = document.querySelector('#duck-quack');
+          const triggerSquish = () => {
+            document.dispatchEvent(new CustomEvent('duck:quack'));
+            if (!reducedMotion.matches) squishStartedAt = performance.now();
+            startAnimating();
+          };
+          window.addEventListener('pointermove', followPointer, { passive: true });
+          window.addEventListener('blur', resetPointer);
+          document.documentElement.addEventListener('mouseleave', resetPointer);
+          viewport.addEventListener('pointerdown', (event) => {
+            if (event.pointerType === 'touch') {
+              activeTouchPointer = event.pointerId;
+              viewport.classList.add('is-dragging');
+              viewport.setPointerCapture?.(event.pointerId);
+              followPointer(event);
+            }
+            if (event.button === 0 || event.pointerType === 'touch' || event.pointerType === 'pen') triggerSquish();
+          });
+          const finishTouch = (event) => {
+            if (event.pointerId !== activeTouchPointer) return;
+            activeTouchPointer = null;
+            viewport.classList.remove('is-dragging');
+            targetYaw = targetPitch = targetEyeX = targetEyeZ = 0;
+            if (reducedMotion.matches) renderImmediate(); else startAnimating();
+          };
+          viewport.addEventListener('pointerup', finishTouch);
+          viewport.addEventListener('pointercancel', finishTouch);
+          viewport.addEventListener('lostpointercapture', finishTouch);
+          viewport.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              triggerSquish();
+            }
+          });
+
+          const splitAndRigEyes = (root) => {
+            root.traverse((mesh) => {
+              if (!mesh.isMesh || !Array.isArray(mesh.material) || !mesh.geometry.groups.length) return;
+              let eyeMaterialIndex = mesh.material.findIndex((material) => /eye/i.test(material.name || ''));
+              if (eyeMaterialIndex < 0 && mesh.geometry.groups.length >= 3) eyeMaterialIndex = 1;
+              const eyeGroup = mesh.geometry.groups.find((group) => group.materialIndex === eyeMaterialIndex);
+              if (!eyeGroup || eyeMaterialIndex < 0) return;
+
+              const geometry = mesh.geometry;
+              const position = geometry.getAttribute('position');
+              const index = geometry.index;
+              const getVertex = (offset) => index ? index.getX(offset) : offset;
+              const triangles = [];
+              let minX = Infinity, maxX = -Infinity;
+              for (let i = eyeGroup.start; i + 2 < eyeGroup.start + eyeGroup.count; i += 3) {
+                const vertices = [getVertex(i), getVertex(i + 1), getVertex(i + 2)];
+                const cx = vertices.reduce((sum, vertex) => sum + position.getX(vertex), 0) / 3;
+                minX = Math.min(minX, ...vertices.map((vertex) => position.getX(vertex)));
+                maxX = Math.max(maxX, ...vertices.map((vertex) => position.getX(vertex)));
+                triangles.push({ vertices, cx });
+              }
+              if (!triangles.length || !Number.isFinite(minX) || !Number.isFinite(maxX)) return;
+              const splitX = (minX + maxX) / 2;
+              const attributes = Object.entries(geometry.attributes);
+              const sides = [Object.fromEntries(attributes.map(([name]) => [name, []])), Object.fromEntries(attributes.map(([name]) => [name, []]))];
+              for (const triangle of triangles) {
+                const side = triangle.cx < splitX ? 0 : 1;
+                for (const vertex of triangle.vertices) {
+                  for (const [name, attribute] of attributes) {
+                    for (let component = 0; component < attribute.itemSize; component++) {
+                      const getter = [attribute.getX, attribute.getY, attribute.getZ, attribute.getW][component];
+                      sides[side][name].push(getter.call(attribute, vertex));
+                    }
+                  }
+                }
+              }
+              for (const side of sides) {
+                const eyeGeometry = new THREE.BufferGeometry();
+                for (const [name, attribute] of attributes) {
+                  eyeGeometry.setAttribute(name, new THREE.BufferAttribute(new Float32Array(side[name]), attribute.itemSize, attribute.normalized));
+                }
+                eyeGeometry.computeBoundingSphere();
+                const eyePivot = new THREE.Group();
+                eyePivot.add(new THREE.Mesh(eyeGeometry, mesh.material[eyeMaterialIndex]));
+                mesh.add(eyePivot);
+                eyePivots.push({ pivot: eyePivot, x: 0, z: 0 });
+              }
+              geometry.clearGroups();
+              const originalGroups = mesh.userData.originalGeometryGroups || [];
+              if (originalGroups.length) {
+                for (const group of originalGroups) {
+                  if (group.materialIndex !== eyeMaterialIndex) geometry.addGroup(group.start, group.count, group.materialIndex);
+                }
+              }
+            });
+          };
+
+          const fitDuck = (model) => {
+            model.updateMatrixWorld(true);
+            const bounds = new THREE.Box3().setFromObject(model);
+            const center = bounds.getCenter(new THREE.Vector3());
+            const dimensions = bounds.getSize(new THREE.Vector3());
+            sourceModelScale = 2.55 / Math.max(dimensions.x, dimensions.y, dimensions.z);
+            const pivot = new THREE.Group();
+            model.scale.setScalar(sourceModelScale);
+            model.position.set(-center.x * sourceModelScale, -center.y * sourceModelScale, -center.z * sourceModelScale);
+            pivot.add(model);
+            duck = pivot;
+            scene.add(pivot);
+            renderer.render(scene, camera);
+            surface.classList.add('is-3d-ready');
+            fallback.alt = '';
+            fallback.setAttribute('aria-hidden', 'true');
+            viewport.removeAttribute('aria-hidden');
+            viewport.setAttribute('role', 'button');
+            viewport.tabIndex = 0;
+            viewport.setAttribute('aria-label', 'A yellow 3D rubber duck by JDSherbert');
+            viewport.setAttribute('aria-description', 'Move the pointer to turn it and track its eyes; drag on a touch screen, or tap to squish.');
+            startAnimating();
+          };
+
+          new ColladaLoader().load('assets/rubber-duck-model.dae', (data) => {
+            data.scene.traverse((mesh) => {
+              if (mesh.isMesh && mesh.geometry.groups.length) {
+                mesh.userData.originalGeometryGroups = mesh.geometry.groups.map((group) => ({ ...group }));
+              }
+            });
+            splitAndRigEyes(data.scene);
+            fitDuck(data.scene);
+          }, undefined, () => {
+          });
+        } catch (error) {
+          console.warn('3D duck unavailable; showing the supplied render instead.', error);
+        }
+      };
+
+      const scheduleInitialization = () => {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(initializeDuck, { timeout: 1800 });
+          } else {
+            window.setTimeout(initializeDuck, 700);
+          }
+        }));
+      };
+
+      if ('IntersectionObserver' in window) {
+        const loadObserver = new IntersectionObserver((entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          loadObserver.disconnect();
+          scheduleInitialization();
+        }, { rootMargin: '160px 0px', threshold: 0 });
+        loadObserver.observe(surface);
+      } else {
+        scheduleInitialization();
+      }
+    }
+  </script>
+</body>
+</html>
